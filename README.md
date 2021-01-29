@@ -1,7 +1,7 @@
-# \[Work In Progress\] AMWA NMOS Template Specification
+# AMWA BCP-002-01: Natural Grouping of NMOS Resources
 
-[![Lint Status](https://github.com/AMWA-TV/nmos-template/workflows/Lint/badge.svg)](https://github.com/AMWA-TV/nmos-template/actions?query=workflow%3ALint)
-[![Render Status](https://github.com/AMWA-TV/nmos-template/workflows/Render/badge.svg)](https://github.com/AMWA-TV/nmos-template/actions?query=workflow%3ARender)
+[![Lint Status](https://github.com/AMWA-TV/nmos-natural-grouping/workflows/Lint/badge.svg)](https://github.com/AMWA-TV/nmos-natural-grouping/actions?query=workflow%3ALint)
+[![Render Status](https://github.com/AMWA-TV/nmos-natural-grouping/workflows/Render/badge.svg)](https://github.com/AMWA-TV/nmos-natural-grouping/actions?query=workflow%3ARender)
 
 This repository holds the source for this Specification, part of the family of [Networked Media Open Specifications](https://specs.amwa.tv/nmos) from the [Advanced Media Workflow Association](https://amwa.tv)
 
@@ -9,17 +9,19 @@ This repository holds the source for this Specification, part of the family of [
 
 ### What does it do?
 
-- It provides a template for AMWA NMOS Interface Specifcations.
+- Documents best practice and recommendations for how to indicate and handle "Natural Groups" of Resources in AMWA NMOS APIs.
+- These are those created by the default operation of a Node/Device, and not user- or automation-defined Groups.
 
 ### Why does it matter?
 
-- It helps ensure consistency between NMOS Specifications.
-- It helps us test our continuous integration.
+
+- Provides a consistent way of referring to groups of related Resources (e.g. video and audio Senders of a camera)
+- This helps with interoperability and integration.
+
 
 ### How does it work?
 
-- It contains examples of documentation, API, schemas, and examples.
-- These are rendered to HTML and uploaded to specs.amwa.tv
+- Nodes add a `grouphint` tag to the JSON representation of each member of a Natural Group.
 
 [//]: # "INTRO-END"
 
