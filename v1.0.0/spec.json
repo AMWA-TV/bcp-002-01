@@ -1,0 +1,27 @@
+{
+  "amwa_id": "BCP-002-01",
+  "url": "https://specs.amwa.tv/bcp-002-01",
+  "name": "Natural Grouping",
+  "status": "AMWA Specification",
+  "repo_name": "bcp-002-01",
+  "alt_repo_name": "nmos-natural-grouping",
+  "repo_url": "https://github.com/AMWA-TV/bcp-002-01",
+  "releases": [
+    "v1.0.0"
+  ],
+  "default_branch": "v1.0.x",
+  "show_in_index": true,
+  "intro": {
+    "what_does_it_do": [
+      "Documents best practice and recommendations for how to indicate and handle \"Natural Groups\" of Resources in AMWA NMOS APIs.",
+      "These are those created by the default operation of a Node/Device, and not user- or automation-defined Groups."
+    ],
+    "why_does_it_matter": [
+      "Provides a consistent way of referring to groups of related Resources (e.g. video and audio Senders of a camera)",
+      "This helps with interoperability and integration."
+    ],
+    "how_does_it_work": [
+      "Nodes add a `grouphint` tag to the JSON representation of each member of a Natural Group."
+    ]
+  }
+}
