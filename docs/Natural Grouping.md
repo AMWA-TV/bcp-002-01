@@ -15,19 +15,19 @@ and how to indicate the roles of each member of the Natural Group.
 ## Introduction (informative)
 
 Often there is a requirement for NMOS client applications to work with Groups of related Resources
-used in NMOS specifications. For example, IS-05's bulk mode allows multiple connections to be make
+used in NMOS specifications. For example, IS-05's bulk mode allows multiple connections to be made
 or broken at the same time; typically there will be some relationship between these connections,
 for example the Receivers are all in the same wall of multiviewers, or the Senders are all located
 in a particular Studio. Prior to the creation of this Best Current Practice, there was no defined
 way of indicating any grouping relationship within the API calls.
 
 In many cases it is just necessary to provide a way of referring to a Group that is
-"formed naturally" by what a system does, and these are called "Natural Group".
+"formed naturally" by what a system does, and these are called "Natural Groups".
 For example, a Node that corresponds to a camera might have a Natural Group called "Camera",
 and there are three Senders within this Natural Group, with Roles "Video", "Audio 1" and "Audio 2".
 
 In this Best Current Practice, Nodes add a `grouphint` tag to the JSON representation
-of each member of a Natural Groups. The details are specified in the [NMOS Parameter Registers][NPR], specifically [here][NPR-TAGS-GROUPHINT].
+of each member of a Natural Group. The details are specified in the [NMOS Parameter Registers][NPR], specifically [here][NPR-TAGS-GROUPHINT].
 
 In some cases a group may be defined by a user or automation system rather than by the Node itself;
 for example a "Stadium Cameras" Group. Such cases are not in scope of this current document.
@@ -67,7 +67,7 @@ An attribute of a Group that limits its scope. This can be either Node or Device
 
 ## Tagging Natural Groups (normative)
 
-Node implementations following this Best Current Practice MUST use the `grouphint` tag as defined in the [NMOS Parameters Registers][NPR-TAGS-GROUPHINT] to indicate Natural Groups.
+Node implementations following this Best Current Practice MUST use the `grouphint` tag as defined in the [NMOS Parameter Registers][NPR-TAGS-GROUPHINT] to indicate Natural Groups.
 
 Node implementations SHALL NOT require API clients to use other mechanisms.
 
@@ -75,7 +75,7 @@ Node implementations SHALL NOT require API clients to use other mechanisms.
 [RFC-2119]: https://tools.ietf.org/html/rfc2119
 "Key words for use in RFCs to Indicate Requirement Levels"
 
-[NPR-TAGS-GROUPHINT]: https://specs.amwa.tv/nmos-parameter-registers/branches/main/tags/grouphint.html
+[NPR-TAGS-GROUPHINT]: https://specs.amwa.tv/nmos-parameter-registers/latest/tags/grouphint/
 "Tags Group Hints"
 
 [NPR]: https://specs.amwa.tv/nmos-parameter-registers
